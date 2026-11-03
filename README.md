@@ -13,6 +13,8 @@
 
 # Cosmos-Framework
 
+![Animated Cosmos Framework workflow: pretrained models flow through fine-tuning, reinforcement learning, distillation and quantization to an adapted model.](./tools/docs/images/cosmos-framework.gif)
+
 **Cosmos-Framework** is an end-to-end framework for training and serving world models, including the **Cosmos3** model family. Everything lives in a single top-level [`cosmos_framework/`](./cosmos_framework) Python package:
 
 - **Training** — distributed FSDP / TP / CP / PP trainer, native DCP checkpoints with HuggingFace `safetensors` import/export, JSONL / WebDataset / LeRobot dataset adapters. Entry point: `cosmos_framework.scripts.train`. See [`docs/training.md`](./docs/training.md).
