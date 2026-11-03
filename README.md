@@ -11,7 +11,7 @@
     Part of the <a href="https://github.com/NVIDIA/Cosmos">NVIDIA Cosmos</a> project family — the training and serving framework repository.
 </p>
 
-# Cosmos-Framework
+<h1 align="center">Cosmos-Framework</h1>
 
 ![Animated Cosmos Framework overview: optional supervised fine-tuning, reinforcement learning, distillation and quantization paths produce adapted or optimized checkpoints. Support varies by model, hardware and backend; evaluate quality and performance before deployment.](./tools/docs/images/cosmos-framework.gif)
 
