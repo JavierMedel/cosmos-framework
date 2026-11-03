@@ -13,7 +13,9 @@
 
 # Cosmos-Framework
 
-![Animated Cosmos Framework workflow: pretrained models flow through fine-tuning, reinforcement learning, distillation and quantization to an adapted model.](./tools/docs/images/cosmos-framework.gif)
+![Animated Cosmos Framework overview: optional supervised fine-tuning, reinforcement learning, distillation and quantization paths produce adapted or optimized checkpoints. Support varies by model, hardware and backend; evaluate quality and performance before deployment.](./tools/docs/images/cosmos-framework.gif)
+
+The diagram summarizes optional capabilities, rather than a required sequence or support for every model-method combination. See the [training guide](./docs/training.md), [post-training paths](./docs/post_training/choose_path.md), [model integrations](./docs/posttrain/index.md) and [quantization examples](./.agents/skills/cookbooks/cosmos3/quantization/README.md) for supported workflows.
 
 **Cosmos-Framework** is an end-to-end framework for training and serving world models, including the **Cosmos3** model family. Everything lives in a single top-level [`cosmos_framework/`](./cosmos_framework) Python package:
 

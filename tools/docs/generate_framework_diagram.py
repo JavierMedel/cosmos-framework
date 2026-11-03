@@ -64,7 +64,7 @@ def render(phase, font_dir):
     for x in (542, 550, 558):
         line([(x, 79), (x, 92)], GREEN, 2)
     label("Existing pretrained model", 550, 126, 25, bold=True)
-    label("Cosmos3  /  GR00T  /  Alpamayo  /  Qwen  /  π0.5", 550, 159, 16, MUTED)
+    label("Example integrations: Cosmos3 / GR00T / Alpamayo / Qwen / π0.5", 550, 159, 16, MUTED)
 
     def flow(top, bottom, offset):
         line([(550, top), (550, bottom)], (57, 82, 36), 2)
@@ -75,12 +75,13 @@ def render(phase, font_dir):
 
     flow(184, 214, 0)
     box((38, 230, 1062, 469), (11, 18, 10), (45, 66, 32), radius=18)
-    label("NVIDIA Cosmos Framework", 550, 263, 26, bold=True)
+    label("NVIDIA Cosmos Framework", 550, 257, 26, bold=True)
+    label("Optional paths; support varies by model, hardware and backend", 550, 285, 13, MUTED)
     cards = [
-        (56, 299, 543, 369, "Fine-tuning", "Teach new tasks"),
-        (557, 299, 1044, 369, "Reinforcement learning", "Improve through feedback"),
+        (56, 299, 543, 369, "Supervised fine-tuning", "Learn from task examples"),
+        (557, 299, 1044, 369, "Reinforcement learning", "Optimize against rewards"),
         (56, 383, 543, 453, "Distillation", "Transfer knowledge from a teacher"),
-        (557, 383, 1044, 453, "Quantization", "Reduce inference compute needs"),
+        (557, 383, 1044, 453, "Quantization", "Use supported lower-precision formats"),
     ]
     # Each card gently brightens once per cycle; all labels remain visible.
     for index, (left, top, right, bottom, title, subtitle) in enumerate(cards):
@@ -102,8 +103,8 @@ def render(phase, font_dir):
     dot(544, 540, 2, GREEN)
     dot(556, 540, 2, GREEN)
     line([(550, 521), (550, 527)], GREEN, 2)
-    label("Adapted model", 550, 579, 25, bold=True)
-    label("Specialized for a task, evaluated and optimized for deployment", 550, 612, 16, MUTED)
+    label("Adapted / optimized checkpoint", 550, 579, 25, bold=True)
+    label("Evaluate task quality and runtime performance before deployment", 550, 612, 16, MUTED)
     return canvas.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
 
 
