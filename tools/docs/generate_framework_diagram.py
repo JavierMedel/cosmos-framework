@@ -14,6 +14,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 WIDTH, HEIGHT, SCALE = 1100, 650, 2
+OUTPUT_WIDTH = 820
 GREEN = (118, 185, 0)  # NVIDIA green, #76B900.
 WHITE = (241, 244, 237)
 MUTED = (167, 177, 160)
@@ -105,7 +106,7 @@ def render(phase, font_dir):
     line([(550, 521), (550, 527)], GREEN, 2)
     label("Adapted / optimized checkpoint", 550, 579, 25, bold=True)
     label("Evaluate task quality and runtime performance before deployment", 550, 612, 16, MUTED)
-    return canvas.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
+    return canvas.resize((OUTPUT_WIDTH, round(HEIGHT * OUTPUT_WIDTH / WIDTH)), Image.Resampling.LANCZOS)
 
 
 def main():
@@ -128,7 +129,7 @@ def main():
         optimize=True,
         disposal=1,
     )
-    print(f"Created {args.output}: {WIDTH}x{HEIGHT}, 80 frames, 6.4-second loop")
+    print(f"Created {args.output}: {first.width}x{first.height}, 80 frames, 6.4-second loop")
 
 
 if __name__ == "__main__":
